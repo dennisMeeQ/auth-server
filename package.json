@@ -1,0 +1,56 @@
+{
+  "name": "auth",
+  "version": "0.0.1",
+  "description": "Authentication server for spotz",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "debug": "nodemon --inspect=0.0.0.0:9222 src/index.js",
+    "docker-debug": "docker-compose up",
+    "test": "mocha test --exit",
+    "lint": "eslint .",
+    "lint:write": "eslint --fix .",
+    "prettier": "prettier --list-different './**/*.js'",
+    "prettier:write": "prettier --write './**/*.js'"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "dependencies": {
+    "argon2": "0.19.3",
+    "body-parser": "1.18.3",
+    "chalk": "2.4.1",
+    "convict": "4.4.0",
+    "cookie-parser": "1.4.3",
+    "cors": "2.8.5",
+    "dotenv": "6.1.0",
+    "express": "4.16.4",
+    "is-uuid": "1.0.2",
+    "jsonwebtoken": "8.4.0",
+    "lodash": "4.17.11",
+    "mongoose": "5.3.13",
+    "morgan": "1.9.1",
+    "passport": "0.4.0",
+    "passport-jwt": "4.0.0",
+    "passport-local": "1.0.0",
+    "uuid": "3.3.2",
+    "winston": "3.1.0"
+  },
+  "devDependencies": {
+    "chai": "4.2.0",
+    "eslint": "5.9.0",
+    "eslint-config-airbnb-base": "13.1.0",
+    "eslint-config-prettier": "3.3.0",
+    "eslint-plugin-import": "2.14.0",
+    "eslint-plugin-prettier": "3.0.0",
+    "husky": "1.2.0",
+    "mocha": "5.2.0",
+    "nodemon": "1.18.9",
+    "prettier": "1.15.2",
+    "supertest": "3.3.0",
+    "z-schema": "3.24.2"
+  }
+}

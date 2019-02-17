@@ -1,0 +1,23 @@
+version: "3.3"
+
+services:
+  auth-db:
+    build: 
+      context: .
+      dockerfile: Dockerfile.mongo
+    ports: 
+      - "27018:27017"
+    environment:
+      MONGO_INITDB_DATABASE: auth
+
+  auth:
+    build: .
+    command: ./wait-for-it.sh auth-db:27017 -- npm run debug
+    volumes:
+      - ./src:/usr/src/app/src
+    ports:
+      - "7474:8080"
+      - "9223:9222"
+    environment:
+      - DEBUG=app:*
+      - FORCE_COLOR=1

@@ -1,0 +1,19 @@
+{
+    "db": {
+        "host": "auth-db",
+        "port": 27017,
+        "name": "auth"
+    },
+
+    "server": {
+        "port": 8080
+    },
+
+    "cors": {
+        "whitelist": ["http://localhost:7373", "http://localhost:7575"]
+    },
+
+    "jwt": {
+        "key": "4a8aa8fc6447598b41f9bedba51e192efe0e41639fd35bcf102dd8f7c721c5bb6e27cdb8c5593c3a666f01c577573cfb67cd1febc2f5a06daf35c399b5fe63bb"
+    }
+}

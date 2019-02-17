@@ -1,0 +1,3 @@
+FROM mongo:4.0.1
+COPY test-data/ /
+COPY test-data/mongoInitScripts/insertExamples.js /docker-entrypoint-initdb.d/

@@ -1,0 +1,9 @@
+.git
+.npmrc
+.eslintrc
+.editorconfig
+.dockerignore
+.DS_Store
+*Dockerfile*
+*docker-compose*
+**/node_modules
